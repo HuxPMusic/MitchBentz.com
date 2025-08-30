@@ -149,3 +149,27 @@ html,body{
   .site-nav .pipe{ display:none; }
   .title-block h1{ font-size: 30px; }
 }
+
+
+/* Notice banner */
+.notice{
+  border-left: 6px solid var(--brand1);
+  background: #f0f6ff;
+}
+
+/* Hyperfixation highlight */
+.hyperfix{
+  background: #fff7d6;
+  border-left: 6px solid var(--brand2);
+  padding-left: 8px;
+}
+.hf-badge{
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  background: #f2e6ff;
+  color: #3a1570;
+  vertical-align: middle;
+}

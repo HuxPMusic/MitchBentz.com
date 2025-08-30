@@ -1,152 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>MitchBentz.com</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
-<link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
-<style>
-:root{--glass:rgba(255,255,255,.32);--glass-dark:rgba(0,0,0,.35);--taskbar:rgba(0,0,0,.28);}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{font-family:'Segoe UI',sans-serif;background:url('Img0_(Windows_7).jpg') center/cover fixed no-repeat;color:#fff;overflow:hidden;position:relative}
-
-/* ---------- shortcuts ---------- */
-.desktop-icon{position:absolute;width:72px;display:flex;flex-direction:column;align-items:center;
-  font-size:.8rem;text-align:center;color:#fff;text-decoration:none;text-shadow:0 0 6px #000}
-.desktop-icon img{height:48px;width:48px;margin-bottom:.3rem}
-.desktop-icon:hover::before{content:attr(data-tip);position:absolute;bottom:-24px;left:50%;transform:translateX(-50%);
-  white-space:nowrap;padding:.2rem .5rem;background:var(--glass-dark);border:1px solid rgba(255,255,255,.45);
-  border-radius:6px;font-size:.7rem;box-shadow:0 2px 6px #000}
-
-/* ---------- widgets ---------- */
-.widget{position:absolute;padding:.8rem;cursor:move;max-width:350px;
-  backdrop-filter:blur(20px) saturate(150%);background:var(--glass);
-  border:1px solid rgba(255,255,255,.55);border-radius:14px;box-shadow:0 4px 12px #000a}
-.widget img{max-width:100%;display:block;pointer-events:none}
-.blinkies-widget img{height:31px;border-radius:4px;box-shadow:0 2px 4px #0008}
-
-/* ---------- taskbar ---------- */
-#taskbar{position:fixed;left:0;right:0;bottom:0;height:54px;z-index:20;
-  background:linear-gradient(to top,var(--taskbar) 0%,rgba(0,0,0,.2) 100%);
-  border-top:1px solid rgba(255,255,255,.35);backdrop-filter:blur(14px) saturate(160%)}
-#start-btn{position:absolute;bottom:1px;left:6px;border:none;background:none;cursor:pointer;z-index:30}
-#start-btn img{height:48px;width:48px;border-radius:50%;box-shadow:0 2px 6px #0006}
-#peek{position:absolute;right:0;bottom:0;width:10px;height:54px;background:var(--glass-dark);
-  border-left:1px solid rgba(255,255,255,.3);transition:background .2s}#peek:hover{background:rgba(255,255,255,.4)}
-#tray{position:absolute;right:148px;bottom:0;height:54px;display:flex;align-items:center;gap:6px}
-#tray img{height:16px;width:16px;filter:drop-shadow(0 0 3px #000)}
-#taskbar-clock{position:absolute;right:20px;bottom:14px;line-height:1.1;text-align:right;
-  font-size:11px;font-weight:600;text-shadow:0 0 5px #000;pointer-events:none}
-
-/* ---------- Start menu ---------- */
-#start-menu{position:fixed;bottom:66px;left:4px;width:380px;height:500px;display:none;z-index:25;
-  background:var(--glass);backdrop-filter:blur(18px) saturate(150%);
-  border:1px solid rgba(255,255,255,.6);border-radius:12px;box-shadow:0 6px 14px #0009;font-size:.9rem}
-  .start-inner{display:flex;height:calc(100% - 64px)}
-  .start-left{flex:1;padding:1rem 1.2rem;border-right:1px solid rgba(255,255,255,.4);overflow:auto}
-  .start-right{width:174px;padding:1rem 1.4rem;overflow:hidden}
-  .start-left a,.start-right a{display:block;color:#fff;padding:.25rem 0;font-weight:600;
-    text-decoration:none;text-shadow:0 0 5px #000}
-  .start-left a:hover,.start-right a:hover{color:#9cd3ff}
-  .userpic{width:60px;height:60px;border-radius:4px;margin:0 auto .8rem;
-    border:2px solid rgba(255,255,255,.9);box-shadow:0 0 6px #000a}
-  .start-right .username{font-weight:700;color:#fff;text-shadow:0 0 5px #000;margin:.6rem 0 1rem}
-.start-bottom{display:flex;align-items:center;gap:.6rem;padding:.6rem 1rem 1rem;border-top:1px solid rgba(255,255,255,.4)}
-.start-bottom span{font-size:.8rem;font-weight:600;white-space:nowrap}
-.start-bottom input{flex:1;height:22px;border:1px solid #6d6d6d;border-radius:2px;padding:0 4px;background:#fff;color:#000;font-size:.78rem}
-.shutdown{background:#e6e6e6;border:1px solid #7f7f7f;border-radius:2px;padding:.2rem .35rem;
-  font-size:.78rem;font-weight:600;color:#000;display:flex;align-items:center;gap:.3rem;cursor:pointer}
-.shutdown:hover{background:#f5f5f5}.shutdown::after{content:"▼";font-size:.55rem;margin-top:-2px}
-
-/* ---------- toast ---------- */
-#toast{position:fixed;bottom:70px;right:20px;display:none;padding:1rem 1.5rem;
-  background:var(--glass);backdrop-filter:blur(12px) saturate(150%);
-  border:1px solid rgba(255,255,255,.6);border-radius:12px;box-shadow:0 4px 12px #0008}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mitch Bentz - Home</title>
+  <meta name="description" content="Personal website for Mitch &quot;Michelle&quot; Bentz.">
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="page">
+    <header class="site-header">
+      <div class="title-block">
+        <h1><span class="shine">Mitch</span> <span class="shine-alt">Bentz</span></h1>
+        <p class="tagline">Vocaloid cover producer - archivist - web tinkerer</p>
+      </div>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/" aria-current="page">Home</a>
+        <span class="pipe">|</span>
+        <a href="/interests.html">Interests</a>
+        <span class="pipe">|</span>
+        <a href="/links.html">Links</a>
+      </nav>
+    </header>
 
-<!-- Recycle Bin -->
-<a href="#" class="desktop-icon" data-tip="Recycle Bin" style="top:20px;left:20px;">
-  <img src="recycle bin.png" alt="Recycle Bin"><span>Recycle Bin</span>
-</a>
+    <main id="main" class="content">
+      <section class="intro card">
+        <h2>About me</h2>
+        <p>Hi, I am Mitch &quot;Michelle&quot;. I run a few sites and spend my free time making Vocaloid covers, archiving media, and polishing small web projects. This site is a simple hub with an older web vibe that still works on phones.</p>
+        <ul class="bullets">
+          <li>I run <a href="https://huxpmusic.com" target="_blank" rel="noopener">HuxP</a>, <a href="https://iwubbzy.com" target="_blank" rel="noopener">iWubbzy.com</a>, and <a href="https://shikitaigen.com" target="_blank" rel="noopener">The Unofficial Shiki Taigen Blog</a>.</li>
+          <li>I use GitHub and GitHub Desktop to publish my sites.</li>
+        </ul>
+      </section>
 
-<!-- Website shortcuts -->
-<a href="https://huxpmusic.com" class="desktop-icon" data-tip="Visit huxpmusic.com." target="_blank" rel="noopener" style="top:120px;left:20px;">
-  <img src="shortcut.png" alt="huxpmusic.com"><span>huxpmusic.com</span>
-</a>
-<a href="https://shikitaigen.com" class="desktop-icon" data-tip="Visit shikitaigen.com." target="_blank" rel="noopener" style="top:220px;left:20px;">
-  <img src="shortcut.png" alt="shikitaigen.com"><span>shikitaigen.com</span>
-</a>
+      <section class="sites">
+        <h2 class="section-title">My websites</h2>
 
-<!-- Widgets -->
-<div class="widget" id="lastfm" style="top:120px;right:40px;">
-  <a href="https://www.last.fm/user/HuxP" target="_blank" rel="noopener">
-    <img src="https://lastfm-recently-played.vercel.app/api?user=HuxP&amp;nowplaying=true" width="350" alt="Now playing on Last.fm">
-  </a>
-</div>
-<div class="widget blinkies-widget" id="blinkies" style="top:420px;right:40px;">
-  <img src="https://adriansblinkiecollection.neocities.org/buttons/a106.jpg" alt="3DS">
-  <img src="https://adriansblinkiecollection.neocities.org/buttons/a112.gif" alt="Anti-AI">
-  <img src="https://adriansblinkiecollection.neocities.org/buttons/a58.gif"  alt="GAY">
-  <img src="https://adriansblinkiecollection.neocities.org/buttons/e23.gif"  alt="Nyan Cat">
-</div>
+        <article class="site-card card">
+          <div class="site-text">
+            <h3>HuxP</h3>
+            <p>Music hub for my covers, projects, and releases. Built as a static site and hosted on GitHub Pages.</p>
+            <dl class="meta">
+              <dt>URL</dt><dd><a href="https://huxpmusic.com" target="_blank" rel="noopener">huxpmusic.com</a></dd>
+              <dt>Hosted on</dt><dd>GitHub Pages</dd>
+              <dt>Repo</dt><dd><em>add the repo link here</em></dd>
+            </dl>
+          </div>
+          <div class="site-shot">
+            <img src="/images/huxp-site.png" alt="Screenshot of the HuxP website">
+          </div>
+        </article>
 
-<!-- Taskbar -->
-<div id="taskbar">
-  <button id="start-btn"><img src="start.png" alt="Start"></button>
-  <div id="tray"><img src="tray1.png"><img src="tray2.png"><img src="tray3.png"></div>
-  <div id="taskbar-clock"></div>
-  <div id="peek" title="Show desktop"></div>
-</div>
+        <article class="site-card card">
+          <div class="site-text">
+            <h3>iWubbzy.com</h3>
+            <p>Fan site project with posts, embeds, and a comment widget. Desktop first with functional mobile layout.</p>
+            <dl class="meta">
+              <dt>URL</dt><dd><a href="https://iwubbzy.com" target="_blank" rel="noopener">iwubbzy.com</a></dd>
+              <dt>Hosted on</dt><dd>GitHub Pages</dd>
+              <dt>Repo</dt><dd><a href="https://github.com/HuxPMusic/iWubbzy.com" target="_blank" rel="noopener">HuxPMusic/iWubbzy.com</a></dd>
+            </dl>
+          </div>
+          <div class="site-shot">
+            <img src="/images/iwubbzy-site.png" alt="Screenshot of the iWubbzy.com website">
+          </div>
+        </article>
 
-<!-- Start menu -->
-<div id="start-menu">
-  <div class="start-inner">
-    <div class="start-left">
-      <a href="https://www.last.fm/user/HuxP" target="_blank" rel="noopener">Last.fm</a>
-      <a href="https://www.instagram.com/shikitaigen" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://pronouns.page/@HuxP"         target="_blank" rel="noopener">Pronouns.page</a>
-      <a href="#" id="discord-link">Discord</a>
-    </div>
-    <div class="start-right">
-      <img src="user icon.png" alt="" class="userpic">
-      <div class="username">Mitch Bentz</div>
-      <a href="#">Documents</a><a href="#">Pictures</a><a href="#">Music</a><a href="#">Computer</a>
-      <a href="#">Control Panel</a><a href="#">Devices and Printers</a><a href="#">Default Programs</a><a href="#">Help and Support</a>
-    </div>
+        <article class="site-card card">
+          <div class="site-text">
+            <h3>The Unofficial Shiki Taigen Blog</h3>
+            <p>Blogger based blog focused on Shiki Taigen updates, art, and links. Styled to match a clean retro theme.</p>
+            <dl class="meta">
+              <dt>URL</dt><dd><a href="https://shikitaigen.com" target="_blank" rel="noopener">shikitaigen.com</a></dd>
+              <dt>Hosted on</dt><dd>Blogger / Blogspot</dd>
+              <dt>Repo</dt><dd>Not applicable</dd>
+            </dl>
+          </div>
+          <div class="site-shot">
+            <img src="/images/shiki-blog.png" alt="Screenshot of the Shiki Taigen Blog">
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-left">
+        <small>&copy; <span id="year"></span> Mitch &quot;Michelle&quot; Bentz.</small>
+      </div>
+      <div class="footer-right">
+        <small>Best viewed at 1024x768 or better. No frames required.</small>
+      </div>
+    </footer>
   </div>
-  <div class="start-bottom">
-    <span>All Programs ▶</span><input type="text" placeholder="Search programs and files">
-    <div class="shutdown">Shut&nbsp;down</div>
-  </div>
-</div>
-
-<div id="toast">Discord username copied!</div>
-
-<script>
-const toast=m=>{const t=document.getElementById('toast');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',3e3)}
-
-/* Discord copy */
-document.getElementById('discord-link').onclick=e=>{e.preventDefault();navigator.clipboard.writeText('huxpmusic').then(()=>toast('Discord username copied!'))}
-
-/* Start menu */
-const startBtn=document.getElementById('start-btn'),startMenu=document.getElementById('start-menu')
-startBtn.addEventListener('click',e=>{e.stopPropagation();startMenu.style.display=startMenu.style.display==='block'?'none':'block'})
-startMenu.addEventListener('click',e=>e.stopPropagation());document.addEventListener('click',()=>startMenu.style.display='none')
-
-/* Clock */
-const clock=()=>{const n=new Date();document.getElementById('taskbar-clock').innerHTML=`${n.toLocaleTimeString([], {hour:'numeric',minute:'2-digit'})}<br>${n.toLocaleDateString()}`};clock();setInterval(clock,1e3)
-
-/* Drag widgets bounded */
-const BAR_H=54
-document.querySelectorAll('.widget').forEach(w=>{let ox=0,oy=0,d=false,l=false
-  w.addEventListener('mousedown',e=>{d=true;ox=e.clientX-w.offsetLeft;oy=e.clientY-w.offsetTop;w.style.zIndex=40;if(!l){w.style.width=w.offsetWidth+'px';w.style.height=w.offsetHeight+'px';l=true}})
-  document.addEventListener('mousemove',e=>{if(!d)return;let L=Math.min(Math.max(0,e.clientX-ox),innerWidth-w.offsetWidth),T=Math.min(Math.max(0,e.clientY-oy),innerHeight-BAR_H-w.offsetHeight);w.style.left=L+'px';w.style.top=T+'px'})
-  document.addEventListener('mouseup',()=>{d=false;w.style.zIndex=30})})
-</script>
+  <script src="/assets/script.js"></script>
 </body>
 </html>

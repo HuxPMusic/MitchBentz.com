@@ -4,110 +4,146 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mitch Bentz - Home</title>
-  <meta name="description" content="Personal website for Mitch &quot;Michelle&quot; Bentz.">
+  <meta name="description" content="Personal website for Mitch Bentz.">
   <link rel="stylesheet" href="/assets/styles.css">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
+
   <div class="page">
     <header class="site-header">
-      <div class="title-block">
-        <h1><span class="shine">Mitch</span> <span class="shine-alt">Bentz</span></h1>
-        <p class="tagline">Vocal synth cover artist - archivist - programmer</p>
+      <div class="masthead">
+        <div class="title-block">
+          <h1>Mitch Bentz</h1>
+          <p class="tagline">Vocal synth cover artist | archivist | programmer</p>
+        </div>
+        <div class="header-badge">
+          Last updated: <span data-build-date>2025-12-24</span>
+        </div>
       </div>
+
       <nav class="site-nav" aria-label="Primary">
         <a href="/" aria-current="page">Home</a>
-        <span class="pipe">|</span>
         <a href="/interests.html">Interests</a>
-        <span class="pipe">|</span>
         <a href="/links.html">Links</a>
       </nav>
     </header>
 
-    <main id="main" class="content">
-      
-      <section class="intro card">
-        <h2>About me</h2>
-        <p>Hi, I am Mitch "Michelle". I am a Vocal synth cover artist and programmer. I use he/she pronouns and I am <strong><span id="age">17</span></strong> years old. I go by Mitch or Michelle since I am genderfluid.</p>
-        <ul class="bullets">
-          <li>I run <a href="https://huxpmusic.com" target="_blank" rel="noopener">HuxP</a>, <a href="https://iwubbzy.com" target="_blank" rel="noopener">iWubbzy.com</a>, and <a href="https://shikitaigen.com" target="_blank" rel="noopener">The Unofficial Shiki Taigen Blog</a>.</li>
-          <li>I have a twin brother, <a href="https://HayBombYT.com" target="_blank" rel="noopener">Safranek (HayBombYT)</a>.</li>
-          <li>I use GitHub and GitHub Desktop to publish my sites.</li>
-        
-        <figure class="about-photo">
-          <img src="/images/mitch-and-hayden.jpg" alt="Mitch (left) and Hayden (right) standing together making a funny face">
-          <figcaption>Mitch and Safranek</figcaption>
-        </figure>
+    <div class="layout">
+      <aside class="sidebar">
+        <section class="card">
+          <h2>Quick links</h2>
+          <ul class="links">
+            <li><a href="https://huxpmusic.com" target="_blank" rel="noopener">HuxP</a></li>
+            <li><a href="https://iwubbzy.com" target="_blank" rel="noopener">iWubbzy.com</a></li>
+            <li><a href="https://shikitaigen.com" target="_blank" rel="noopener">The Unofficial Shiki Taigen Blog</a></li>
+            <li><a href="https://github.com/HuxPMusic" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+          <p class="small-note">Tip: press <span class="kbd">Ctrl</span> + <span class="kbd">L</span> to jump to the address bar.</p>
+        </section>
 
-</ul>
-      </section>
+        <section class="card">
+          <h2>88x31 buttons</h2>
+          <p class="small-note">No images yet, so these are CSS microbuttons.</p>
+          <div class="microbuttons" role="list">
+            <a class="microbutton" href="https://huxpmusic.com" target="_blank" rel="noopener" role="listitem">HuxP</a>
+            <a class="microbutton" href="https://iwubbzy.com" target="_blank" rel="noopener" role="listitem">iWubbzy</a>
+            <a class="microbutton" href="https://github.com/HuxPMusic" target="_blank" rel="noopener" role="listitem">GitHub</a>
+            <a class="microbutton" href="/links.html" role="listitem">Links</a>
+          </div>
+        </section>
+      </aside>
 
+      <main id="main" class="content">
+        <div class="marquee" aria-label="Site message">
+          <span>Welcome to my corner of the web! Built to feel like the early 2000s, but still readable on modern screens.</span>
+        </div>
 
-      <section class="sites">
-        <h2 class="section-title">My websites</h2>
+        <section class="card">
+          <h2>About</h2>
+          <p>Hi, I am Mitch Bentz. I make vocal synth covers, archive things I care about, and build small websites. I use he/she pronouns. I am <strong><span id="age">17</span></strong> years old.</p>
+          <ul class="bullets">
+            <li>I publish my sites with GitHub and GitHub Desktop.</li>
+            <li>I run HuxP, iWubbzy.com, and The Unofficial Shiki Taigen Blog.</li>
+            <li>I have a twin brother, <a href="https://HayBombYT.com" target="_blank" rel="noopener">Safranek (HayBombYT)</a>.</li>
+          </ul>
 
-        <article class="site-card card">
-          <div class="site-text">
-            <h3>HuxP</h3>
-            <p>Music hub for my covers, projects, and releases. Built as a static site and hosted on GitHub Pages.</p>
-            <dl class="meta">
-              <dt>URL</dt><dd><a href="https://huxpmusic.com" target="_blank" rel="noopener">huxpmusic.com</a></dd>
-              <dt>Hosted on</dt><dd>GitHub Pages</dd>
-              <dt>Repo</dt><dd><a href="https://github.com/HuxPMusic/HuxPMusic.com" target="_blank" rel="noopener">HuxPMusic/HuxPMusic.com</a></dd>
-            </dl>
-          </div>
-          <div class="site-shot">
-            <img src="/images/huxp-site.png" alt="Screenshot of the HuxP website">
-          </div>
-        </article>
+          <figure class="about-photo">
+            <img src="/images/mitch-and-hayden.jpg" alt="Mitch (left) and Hayden (right) standing together making a funny face">
+            <figcaption class="small-note">Mitch and Safranek</figcaption>
+          </figure>
+        </section>
 
-        <article class="site-card card">
-          <div class="site-text">
-            <h3>iWubbzy.com</h3>
-            <p>Fan site project with posts, embeds, and a comment widget. Desktop first with functional mobile layout.</p>
-            <dl class="meta">
-              <dt>URL</dt><dd><a href="https://iwubbzy.com" target="_blank" rel="noopener">iwubbzy.com</a></dd>
-              <dt>Hosted on</dt><dd>GitHub Pages</dd>
-              <dt>Repo</dt><dd><a href="https://github.com/HuxPMusic/iWubbzy.com" target="_blank" rel="noopener">HuxPMusic/iWubbzy.com</a></dd>
-            </dl>
-          </div>
-          <div class="site-shot">
-            <img src="/images/iwubbzy-site.png" alt="Screenshot of the iWubbzy.com website">
-          </div>
-        </article>
+        <section class="card">
+          <h2>My websites</h2>
 
-        <article class="site-card card">
-          <div class="site-text">
-            <h3>The Unofficial Shiki Taigen Blog</h3>
-            <p>Blogger based blog focused on Shiki Taigen updates, art, and links. Styled to match a clean retro theme.</p>
-            <dl class="meta">
-              <dt>URL</dt><dd><a href="https://shikitaigen.com" target="_blank" rel="noopener">shikitaigen.com</a></dd>
-              <dt>Hosted on</dt><dd>Blogger / Blogspot</dd>
-              <dt>Repo</dt><dd>Not applicable</dd>
-            </dl>
-          </div>
-          <div class="site-shot">
-            <img src="/images/shiki-blog.png" alt="Screenshot of the Shiki Taigen Blog">
-          </div>
-        </article>
-      </section>
-    </main>
+          <article class="site-card">
+            <div class="site-text">
+              <h3>HuxP</h3>
+              <p>Music hub for my covers, projects, and releases. Static site hosted on GitHub Pages.</p>
+              <dl class="meta">
+                <dt>URL</dt><dd><a href="https://huxpmusic.com" target="_blank" rel="noopener">huxpmusic.com</a></dd>
+                <dt>Hosted on</dt><dd>GitHub Pages</dd>
+                <dt>Repo</dt><dd><a href="https://github.com/HuxPMusic/HuxPMusic.com" target="_blank" rel="noopener">HuxPMusic/HuxPMusic.com</a></dd>
+              </dl>
+            </div>
+            <div class="site-shot">
+              <img src="/images/huxp-site.png" alt="Screenshot of the HuxP website">
+            </div>
+          </article>
+        </section>
+
+        <section class="card">
+          <article class="site-card">
+            <div class="site-text">
+              <h3>iWubbzy.com</h3>
+              <p>Fan site project with posts, embeds, and a comment widget. Desktop first with a functional mobile layout.</p>
+              <dl class="meta">
+                <dt>URL</dt><dd><a href="https://iwubbzy.com" target="_blank" rel="noopener">iwubbzy.com</a></dd>
+                <dt>Hosted on</dt><dd>GitHub Pages</dd>
+                <dt>Repo</dt><dd><a href="https://github.com/HuxPMusic/iWubbzy.com" target="_blank" rel="noopener">HuxPMusic/iWubbzy.com</a></dd>
+              </dl>
+            </div>
+            <div class="site-shot">
+              <img src="/images/iwubbzy-site.png" alt="Screenshot of the iWubbzy.com website">
+            </div>
+          </article>
+        </section>
+
+        <section class="card">
+          <article class="site-card">
+            <div class="site-text">
+              <h3>The Unofficial Shiki Taigen Blog</h3>
+              <p>Blogger based blog focused on Shiki Taigen updates, art, and links.</p>
+              <dl class="meta">
+                <dt>URL</dt><dd><a href="https://shikitaigen.com" target="_blank" rel="noopener">shikitaigen.com</a></dd>
+                <dt>Hosted on</dt><dd>Blogger</dd>
+                <dt>Repo</dt><dd>Not applicable</dd>
+              </dl>
+            </div>
+            <div class="site-shot">
+              <img src="/images/shiki-blog.png" alt="Screenshot of the Shiki Taigen Blog">
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
 
     <footer class="site-footer">
-      <div class="footer-left">
-        <small>&copy; <span id="year"></span> Mitch &quot;Michelle&quot; Bentz.</small>
+      <div>
+        <small>&copy; <span id="year"></span> Mitch Bentz.</small>
       </div>
-      <div class="footer-right">
+      <div>
         <small>Best viewed at 1024x768 or better. No frames required.</small>
       </div>
     </footer>
   </div>
+
   <script src="/assets/script.js"></script>
 </body>
 </html>
